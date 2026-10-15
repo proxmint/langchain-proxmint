@@ -1,0 +1,34 @@
+[project]
+name = "langchain-proxmint"
+version = "0.1.0"
+description = "LangChain tool and document loader that read web pages through Proxmint residential, datacenter and mobile proxies, with country, city and ASN targeting and sticky sessions."
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.10"
+authors = [{ name = "Proxmint", email = "support@proxmint.com" }]
+keywords = ["langchain", "proxy", "residential-proxy", "web-scraping", "document-loader", "agents", "proxmint"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Topic :: Internet :: Proxy Servers",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = ["langchain-core>=0.3,<2", "httpx>=0.27,<1"]
+
+[project.urls]
+Homepage = "https://proxmint.com"
+Documentation = "https://proxmint.com/docs/langchain"
+Repository = "https://github.com/proxmint/langchain-proxmint"
+Issues = "https://github.com/proxmint/langchain-proxmint/issues"
+
+[dependency-groups]
+test = ["pytest>=8", "langchain-tests>=1.1"]
+
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
